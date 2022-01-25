@@ -2,13 +2,10 @@ import pandas as pd
 import numpy as np
 
 
-def get_lower_and_upper_bounds(series,k):
+def get_lower_and_upper_bounds(series,k=1.5):
     '''
     Function to define the lower and upper bounds of numpy series ('series'), multiplier k
     '''
-    # set default multiplier. this code isn't working at the moment...
-    # if k is None:
-    #     k == 1.5
     # define upper and lower quartiles
     q1 = series.quantile(0.25)
     q3 = series.quantile(0.75)
